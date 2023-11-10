@@ -1,12 +1,9 @@
 import React from 'react'
 import './App.css'
+import { TodoList } from './redux-toolkit-thunk/page'
 
 function App() {
-  return (
-    <>
-      <h1>Test react toolkit</h1>
-    </>
-  )
+  return <TodoList />
 }
 
 export default App
