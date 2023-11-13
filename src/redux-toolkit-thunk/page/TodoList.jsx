@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { increment } from './redux/Reducer'
+import { decrement, increment } from '../redux/Reducer'
 
 const TodoList = () => {
   const count = useSelector((state) => state.users.value)
@@ -10,10 +10,15 @@ const TodoList = () => {
     dispatch(increment())
   }
 
+  const handleDecrement = () => {
+    dispatch(decrement())
+  }
+
   return (
     <>
       <h1>{count}</h1>
       <button onClick={handleIncrement}>Increment ::::</button>
+      <button onClick={handleDecrement}>Decrement ::::</button>
     </>
   )
 }
