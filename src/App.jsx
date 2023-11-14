@@ -1,9 +1,14 @@
 import React from 'react'
 import './App.css'
-import { TodoList } from './redux-toolkit-thunk/page'
+import RegisterPage from './connect_firebase/page/register/RegisterPage'
 
 function App() {
-  return <TodoList />
+  // return <TodoList />
+  return (
+    <React.Fragment>
+      <RegisterPage />
+    </React.Fragment>
+  )
 }
 
 export default App

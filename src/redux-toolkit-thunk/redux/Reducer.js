@@ -1,8 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import axios from 'axios'
-import { useDispatch } from 'react-redux'
-
-const dispatch = useDispatch()
 
 // First, create the thunk
 const fetchUserById = createAsyncThunk(
@@ -51,8 +48,6 @@ const usersSlice = createSlice({
     })
   },
 })
-
-dispatch(fetchUserById(123))
 
 export const { increment, decrement, incrementByAmount } = usersSlice.actions
 export default usersSlice.reducer
